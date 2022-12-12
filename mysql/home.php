@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <form action="posthandling.php" method="post" >
+    <form action="server.php" method="post" >
         <label for="">Name : </label>
         <input type="text" name="name"><br><br>
         <label for="">Password : </label>

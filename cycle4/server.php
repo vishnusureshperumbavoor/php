@@ -1,8 +1,10 @@
 <?php 
+session_start();
 $server ="localhost";
 $username = "root";
 $password = "";
 $dbname = "gptcpbvr";
+//$_SESSION["regno"] = "";
 
 $conn = new mysqli($server, $username, $password, $dbname);
 
@@ -23,8 +25,9 @@ if(isset($_POST["student_registration"])){
     $sql = "INSERT INTO studentsdetails VALUES (NULL,'$studentname','$regno','$studentpassword')";
         
     if ($conn->query($sql) === TRUE) {
+        $_SESSION["regno"] = $regno;
         echo '<script>alert("Registration Successful")</script>';
-        echo "<script>window.location.href='http://localhost/php/cycle4/login.php'</script>";
+        echo "<script>window.location.href='http://localhost/php/cycle4/home.php'</script>";
         //header("Location:http://localhost/php/cycle3/login/");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -34,15 +37,16 @@ if(isset($_POST["student_registration"])){
 if(isset($_POST["student_login"])){
     $regno = $_POST["regno"];
     $userpassword = $_POST["password"];
-
-    $sql = "SELECT * FROM studentsdetails WHERE registerno='$regno' AND password='$userpassword'";
-    if ($conn->query($sql)===TRUE) {
+    $sql = "SELECT * FROM studentsdetails WHERE registerno='$regno' AND userpassword='$userpassword'";
+    if ($conn->query($sql)->num_rows > 0) {
+        $_SESSION["regno"] = $regno;
         echo '<script>alert("Login Successful")</script>';
+        //header('location: home.php');
         echo "<script>window.location.href='http://localhost/php/cycle4/home.php'</script>";
     } else {
-    // echo "<script>alert('Error: " . $sql . $conn->error."')</script>";
+    //echo "<script>alert('Error: $sql $conn->error')</script>";
     echo "<script>alert('Login unsuccessful try again')</script>";
-    echo "<script>window.location.href='http://localhost/php/cycle4/login.php'</script>";
     }
 }
+
 $conn->close();
