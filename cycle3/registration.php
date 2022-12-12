@@ -21,7 +21,7 @@
       </tr>
       <tr>
         <td style="text-align: right">Register Number</td>
-        <td><input type="number" name="regno" required/></td>
+        <td><input type="number" name="regno" required onclick="return validate()"/></td>
       </tr>
       <!-- <tr>
         <td style="text-align: right">Email</td>
