@@ -1,7 +1,7 @@
 <?php 
 $server ="localhost";
 $username = "root";
-$password = "mysql";
+$password = "";
 $dbname = "gptcpbvr";
 
 $conn = new mysqli($server, $username, $password, $dbname);
@@ -25,12 +25,12 @@ if(isset($_POST["student_registration"])){
     if ($conn->query($sql) === TRUE) {
         echo '<script>alert("Registration Successful")</script>';
         echo "<script>window.location.href='http://localhost/php/cycle4/login.php'</script>";
-        //echo "Successfully Inserted";
         //header("Location:http://localhost/php/cycle3/login/");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     } 
 }
+
 if(isset($_POST["student_login"])){
     $regno = $_POST["regno"];
     $userpassword = $_POST["password"];
@@ -39,10 +39,10 @@ if(isset($_POST["student_login"])){
     if ($conn->query($sql)===TRUE) {
         echo '<script>alert("Login Successful")</script>';
         echo "<script>window.location.href='http://localhost/php/cycle4/home.php'</script>";
-} else {
+    } else {
     // echo "<script>alert('Error: " . $sql . $conn->error."')</script>";
     echo "<script>alert('Login unsuccessful try again')</script>";
     echo "<script>window.location.href='http://localhost/php/cycle4/login.php'</script>";
-}
+    }
 }
 $conn->close();
