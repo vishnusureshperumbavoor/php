@@ -33,9 +33,6 @@
         <td><input type="reset" value="Reset"></td>
       </tr>
       <tr >
-        <td colspan="2"><p>Already having an account?
-			<a href="login.php">Login Here!</a>
-		</p></td>
       </tr>
     </table>
     </form>

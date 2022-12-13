@@ -24,9 +24,6 @@
         <td><input type="reset" value="Reset"></td>
       </tr>
       <tr >
-        <td colspan="2"><p>New Here?
-            <a href="registration.php">Click here to register!</a>
-		</p></td>
       </tr>
     </table>
     </form>
