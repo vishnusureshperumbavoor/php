@@ -10,13 +10,21 @@ sudo apt install php libapache2-mod-php php-mysql -y
 
 cd /var/www/html
 
+
+
 ACCESS GRAND TO var/www
 
 sudo chown -R $USER:$USER /var/www
 
 
+INSTALL PHPMYADMIN
 
-mysql password lo
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+
+
+MYSQL PASSWORD SETTING
+
+sudo mysql
 
 SET GLOBAL validate_password.policy = 0;
 
