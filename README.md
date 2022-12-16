@@ -1,8 +1,15 @@
-access grand to var/www/html
+###LAMP INSTALLATION###
+
+sudo apt update
+
+sudo apt install apache2 -y
+
+###ACCESS GRAND TO var/www###
 
 sudo chown -R $USER:$USER /var/www
 
-#mysql password low
+
+###mysql password low###
 
 SET GLOBAL validate_password.policy = 0;
 
