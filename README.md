@@ -8,8 +8,6 @@ sudo apt install mysql-server -y
 
 sudo apt install php libapache2-mod-php php-mysql -y
 
-INSTALL PHPMYADMIN
-
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
 
 (click space key before clicking enter while selecting apache2. No need to give password)
@@ -35,7 +33,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mysql';
 
 FLUSH PRIVILEGES;
 
-quit;
+EXIT;
 
 ACCESS GRAND TO var/www
 
