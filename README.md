@@ -1,15 +1,23 @@
-###LAMP INSTALLATION###
+LAMP INSTALLATION
 
 sudo apt update
 
 sudo apt install apache2 -y
 
-###ACCESS GRAND TO var/www###
+sudo apt install mysql-server -y
+
+sudo apt install php libapache2-mod-php php-mysql -y
+
+sudo systemctl restart apache2
+
+
+ACCESS GRAND TO var/www
 
 sudo chown -R $USER:$USER /var/www
 
 
-###mysql password low###
+
+mysql password lo
 
 SET GLOBAL validate_password.policy = 0;
 
