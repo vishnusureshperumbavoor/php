@@ -30,6 +30,12 @@ MYSQL PASSWORD SETTING
 
 sudo mysql
 
+INSTALL COMPONENT "file://component_validate_password";
+
+exit;
+
+
+
 SET GLOBAL validate_password.policy = 0;
 
 SET GLOBAL validate_password.length = 5;
