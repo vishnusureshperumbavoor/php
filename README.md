@@ -33,5 +33,3 @@ FLUSH PRIVILEGES;
 EXIT;
 
 cd /var/www/html
-
-(test saving by creating a file)
