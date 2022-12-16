@@ -8,8 +8,6 @@ sudo apt install mysql-server -y
 
 sudo apt install php libapache2-mod-php php-mysql -y
 
-sudo systemctl restart apache2
-
 
 ACCESS GRAND TO var/www
 
