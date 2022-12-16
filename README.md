@@ -14,7 +14,7 @@ SET GLOBAL validate_password.number_count = 0;
 
 SET GLOBAL validate_password.special_char_count = 0;
 
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'mysql';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mysql';
 
 FLUSH PRIVILEGES;
 
