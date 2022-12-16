@@ -21,6 +21,8 @@ INSTALL PHPMYADMIN
 
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
 
+(click space key before clicking enter while selecting apache2)
+
 
 MYSQL PASSWORD SETTING
 
