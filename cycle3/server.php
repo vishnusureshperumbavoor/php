@@ -7,14 +7,19 @@ $dbname = "gptcpbvr";
 
 $conn = new mysqli($server, $username, $password, $dbname);
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else{
+      echo "Connection successful<br>";
+}
+
 if(isset($_POST["student_registration"])){
     $studentname = $_POST["name"];
     $regno = $_POST["regno"];
     $studentpassword = $_POST["password"];
     $sql = "SELECT * FROM studentsdetails WHERE registerno=$regno";
-    echo $conn->query($sql)->num_rows;
     if($conn->query($sql)->num_rows>0){
-        echo '<script>alert("Registration error. Register number already exists.")</script>';
+        echo '<script>alert("Register number already exists.")</script>';
     }else{
         $sql = "INSERT INTO studentsdetails VALUES (NULL,'$studentname','$regno','$studentpassword')";
         if ($conn->query($sql) === TRUE) {

@@ -4,6 +4,7 @@ if(!isset($_SESSION['regno'])){
     echo "<script>alert('You have to log in first')</script>";
     echo "<script>window.location.href='http://localhost/php/cycle3/login.php'</script>";
 }
+
 if(isset($_GET['logout'])){
     session_destroy();
     session_unset();
@@ -32,7 +33,7 @@ if(isset($_GET['logout'])){
         $conn->close();
     ?>
     <br>
-    <button id="logoutbutton"><a href="home.php?logout='1'" id="logout">Click here to Logout</a></button>
+    <button><a href="home.php?logout='1'" id="logout">Click here to Logout</a></button>
     </div>
 </body>
 </html>
